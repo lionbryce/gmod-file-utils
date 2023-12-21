@@ -29,7 +29,7 @@ function file.Delete(name)
     local i
 
     -- If it exists, get new name; name, name_1, name_2, etc
-    while file.Exists(nameWithPath .. (i and ("_" .. i) or "") .. ".txt") do
+    while file.Exists(nameWithPath .. (i and ("_" .. i) or "") .. ".txt", "DATA") do
         if i and i >= 1000 then return end -- Loop limit; Can be removed, but it's staying 
         i = (i or 0) + 1
     end
