@@ -51,3 +51,21 @@ function file.Delete(path)
     file.UnsafeDelete(originalPath)
 	return fileContent, path
 end
+
+-- do -- tests
+-- 	print("Running filelib tests")
+-- 	local paths = {}
+-- 	local path = "filelibtest/test.txt"
+-- 	for i=1,10 do -- create & delete 10 copies
+-- 		file.Write(path, "TEST" .. i .. "TEST")
+-- 		assert(file.Read(path) == "TEST" .. i .. "TEST", "Failed to write file")
+-- 		paths[i] = {file.Delete(path)}
+-- 		assert(not file.Exists(path, "DATA"), "Failed to delete file")
+-- 	end
+	
+-- 	for k,v in ipairs(paths) do
+-- 		print("Testing file " .. k, v[1], v[2])
+-- 		assert(v[1] == file.Read(v[2]), "Deleted file doesn't match")
+-- 	end
+-- 	print("Filelib tests passed")
+-- end
